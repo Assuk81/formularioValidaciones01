@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>JSValidator</title>
+</head>
+<body>
+    <form action="" id="miformulario" method="GET">
+        <div>
+            <label for="nombre">Nombre: </label>
+            <!--data-validator para poner mas datos necesarios para las diferentes validaciones,en este caso decimos a la clase
+            que este campo es requerido y necesita tener una longitud-->
+            <input class="jsValidator" type="text" name="nombre" id="nombre" data-validaciones="required length">
+        </div>
+        <div>
+            <label for="mail">Email: </label>
+            <input class="jsValidator" type="text" name="mail" id="mail" data-validaciones="required">
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <script src="jsvalidator.js"></script>
+
+    <script>
+
+        var miformValidator = new JSValidator('miformulario');
+
+        miformValidator.init();
+
+    </script>
+</body>
+</html>
